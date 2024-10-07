@@ -13,7 +13,7 @@ const SolarSystem = () => {
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
   const [timeScaleLabel, setTimeScaleLabel] = useState("Hour");
   const [selectedPlanet, setSelectedPlanet] = useState(null); // Estado para el planeta seleccionado
-  const [planets, setPlanets] = useState([]);
+  const [setPlanets] = useState([]);
   const [cameraInitialPosition, setCameraInitialPosition] = useState({});
 
   // Determinar la escala de tiuempo basado en la velocidad
@@ -270,38 +270,6 @@ const SolarSystem = () => {
     };
   }, [speedMultiplier]);
 
-  const zoomInToPlanet = (planet) => {
-    if (!planet) return;
-    setSelectedPlanet(planet);
-
-    new TWEEN.Tween(camera.position)
-      .to(
-        {
-          x: -window.innerWidth / 4, // Posicionar el planeta en la mitad izquierda
-          y: planet.mesh.position.y,
-          z: planet.size * 5,
-        },
-        1500
-      )
-      .easing(TWEEN.Easing.Quadratic.InOut)
-      .start();
-  };
-
-  const zoomOutToSolarSystem = () => {
-    setSelectedPlanet(null);
-    new TWEEN.Tween(camera.position)
-      .to(
-        {
-          x: cameraInitialPosition.x,
-          y: cameraInitialPosition.y,
-          z: cameraInitialPosition.z,
-        },
-        1500
-      )
-      .easing(TWEEN.Easing.Quadratic.InOut)
-      .start();
-  };
-
   useEffect(() => {
     setTimeScaleLabel(determineTimeScale(speedMultiplier));
   }, [speedMultiplier]);
@@ -331,15 +299,6 @@ const SolarSystem = () => {
     new TWEEN.Tween(camera.position)
       .to(cameraInitialPosition, 2000)
       .easing(TWEEN.Easing.Quadratic.InOut)
-      .start();
-  };
-
-  const animatePlanetAppearance = (planet) => {
-    planet.mesh.scale.set(0, 0, 0); // Hacer el planeta muy pequeño inicialmente
-
-    new TWEEN.Tween(planet.mesh.scale)
-      .to({ x: planet.size, y: planet.size, z: planet.size }, 1500) // Animar la escala hacia su tamaño real
-      .easing(TWEEN.Easing.Elastic.Out)
       .start();
   };
 

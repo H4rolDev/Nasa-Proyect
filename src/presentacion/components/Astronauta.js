@@ -29,7 +29,7 @@ function Astronauta({ planeta }) {
       <div className='containerLink'>
         <span className="space-title">Are you fascinated about the universe?</span>
       </div>
-      <a href="https://www.nasa.gov/careers" className="space-link" target="_blank">Learn more!</a>
+      <a href="https://www.nasa.gov/careers" className="space-link" target="_blank" rel="noreferrer">Learn more!</a>
       
     </div>
   );

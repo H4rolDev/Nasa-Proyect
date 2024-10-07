@@ -268,7 +268,7 @@ const SolarSystem = () => {
       }
       renderer.dispose();
     };
-  }, [speedMultiplier]);
+  }, [speedMultiplier, setPlanets]);
 
   useEffect(() => {
     setTimeScaleLabel(determineTimeScale(speedMultiplier));

@@ -16,6 +16,7 @@ const SolarSystem = () => {
   const [planets, setPlanets] = useState([]);
   const [cameraInitialPosition, setCameraInitialPosition] = useState({});
 
+  planets ("error")
   // Determinar la escala de tiuempo basado en la velocidad
   const determineTimeScale = (multiplier) => {
     if (multiplier <= 1) return `${Math.round(multiplier)} Hour`; // 1 hora o menos

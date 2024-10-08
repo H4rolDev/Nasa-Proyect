@@ -7,77 +7,78 @@ import "./Presentacion.css";
 const planetas = [  
   { 
     nombre: "The Sun", 
-    descripcion: "The Sun is the star of the solar system, providing light and heat to our planet.", 
-    calendario: "Upcoming solar events include solar eclipses and sunspots.", 
-    exploraciones: "Explorations of the Sun have been conducted by missions like Parker Solar Probe.", 
-    curiosidades: "The Sun accounts for about 99.86% of the mass of the solar system.", 
-    masInformacion: "For more information, visit [NASA - The Sun](https://solarsystem.nasa.gov/solar-system/sun/overview/) and explore careers in astronomy at [NASA Careers](https://www.nasa.gov/careers)."
+    descripcion: "The Sun is the star of our solar system, providing the necessary light and heat to support life on Earth. It is a massive ball of hydrogen and helium undergoing nuclear fusion at its core.", 
+    calendario: "On June 21, the Summer Solstice marks the longest day of the year in the Northern Hemisphere, thanks to the Sun’s tilt. In 2024, a total solar eclipse will be visible across parts of North America, providing a rare celestial spectacle.", 
+    exploraciones: "Explorations of the Sun have been conducted by missions like the Parker Solar Probe, which is studying the outer corona to understand solar wind and magnetic fields.", 
+    curiosidades: "The Sun accounts for about 99.86% of the mass of the solar system. A single solar flare can release as much energy as billions of atomic bombs.", 
+    masInformacion: "https://solarsystem.nasa.gov/solar-system/sun/overview/"
   },
   { 
     nombre: "Mercury", 
-    descripcion: "Mercury is the closest planet to the Sun, with a very thin atmosphere.", 
-    calendario: "Mercury's calendar features extreme temperature fluctuations between day and night.", 
-    exploraciones: "Explorations on Mercury have been carried out by Mariner 10 and MESSENGER.", 
-    curiosidades: "Mercury is the smallest planet in our solar system.", 
-    masInformacion: "Learn more at [NASA - Mercury](https://solarsystem.nasa.gov/planets/mercury/overview/) and find out about careers in planetary science at [American Geophysical Union](https://www.agu.org/)."
+    descripcion: "Mercury is the closest planet to the Sun and is known for its extreme temperature fluctuations due to its thin atmosphere. It experiences scorching daytime temperatures and freezing nights.", 
+    calendario: "In May 2025, Mercury will transit the Sun—a rare event where the planet passes directly between the Sun and Earth, visible as a tiny dot moving across the Sun's surface.", 
+    exploraciones: "Mercury has been explored by Mariner 10 and MESSENGER missions. BepiColombo, a joint mission between ESA and JAXA, is currently en route to study the planet in greater detail.", 
+    curiosidades: "Mercury has no moons and is the smallest planet in the solar system. It has a large iron core, which generates a magnetic field, though much weaker than Earth's.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/mercury/overview/"
   },
   { 
     nombre: "Venus", 
-    descripcion: "Venus is known for its dense atmosphere, which traps heat.", 
-    calendario: "Cosmic events on Venus include its retrograde rotation.", 
-    exploraciones: "Explorations of Venus include the Soviet Venera missions.", 
-    curiosidades: "Venus is often called Earth's 'sister planet' due to its similar size.", 
-    masInformacion: "For more details, visit [NASA - Venus](https://solarsystem.nasa.gov/planets/venus/overview/) and consider studying planetary geology at [Geological Society of America](https://www.geosociety.org/)."
+    descripcion: "Venus is the second planet from the Sun and is known for its thick, toxic atmosphere dominated by carbon dioxide, leading to extreme greenhouse gas effects and surface temperatures hot enough to melt lead.", 
+    calendario: "In 2027, Venus will shine as the brightest object in the night sky, often referred to as the 'Evening Star'. Venus is at its maximum brightness during its greatest elongation from the Sun.", 
+    exploraciones: "The Soviet Venera program landed several probes on Venus, and NASA's Magellan mission mapped its surface using radar. Future missions, like VERITAS and DAVINCI, aim to study Venus in greater detail.", 
+    curiosidades: "Venus is often called Earth's 'sister planet' due to its similar size and composition. However, its surface pressure is 92 times that of Earth.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/venus/overview/"
   },
   { 
     nombre: "Earth", 
-    descripcion: "Our home, the third planet from the Sun, supports life with its diverse ecosystems.", 
-    calendario: "The astronomical calendar of Earth includes various celestial events like solstices and equinoxes.", 
-    exploraciones: "Explorations of Earth include numerous space missions and satellite observations.", 
-    curiosidades: "Earth is the only known planet to support life.", 
-    masInformacion: "Explore more at [NASA - Earth](https://solarsystem.nasa.gov/planets/earth/overview/) and look into environmental science careers at [American Society for Environmental Scientists](https://www.ases.org/)."
+    descripcion: "Earth is the third planet from the Sun and the only known planet that supports life, with a diverse range of ecosystems, water, and an atmosphere composed mainly of nitrogen and oxygen.", 
+    calendario: "On April 8, 2024, a total solar eclipse will be visible across parts of North America. This rare event will momentarily plunge daylight into darkness, offering a dramatic celestial experience.", 
+    exploraciones: "Earth is continuously monitored through satellite observations, including missions like Landsat and the Global Precipitation Measurement (GPM) mission. Human space exploration also allows us to study Earth from orbit.", 
+    curiosidades: "Earth has one natural satellite, the Moon, which is believed to have formed after a massive collision between Earth and a Mars-sized body. About 70% of Earth's surface is covered in water.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/earth/overview/"
   },
   { 
     nombre: "Mars", 
-    descripcion: "The red planet, with its mountains and deserts, has the largest volcano and canyon in the solar system.", 
-    calendario: "Cosmic events on Mars include the occurrence of dust storms.", 
-    exploraciones: "Explorations of Mars have been conducted by rovers like Curiosity and Perseverance.", 
-    curiosidades: "Mars has two small moons named Phobos and Deimos.", 
-    masInformacion: "Learn more at [NASA - Mars](https://solarsystem.nasa.gov/planets/mars/overview/) and consider a career in astrobiology at [Astrobiology Institute](https://astrobiology.nasa.gov/)."
+    descripcion: "Mars, often called the Red Planet due to its iron oxide-rich surface, has vast deserts, mountains, and the largest volcano and canyon in the solar system.", 
+    calendario: "In October 2024, Mars will come into opposition, meaning it will be directly opposite the Sun in the sky, offering the best views of the planet through a telescope.", 
+    exploraciones: "Explorations of Mars have included numerous missions like the Viking landers, Spirit and Opportunity rovers, and the current Perseverance rover, which is searching for signs of ancient life.", 
+    curiosidades: "Mars has two small moons, Phobos and Deimos, which may be captured asteroids. Scientists are working on missions to bring samples from Mars back to Earth.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/mars/overview/"
   },
   { 
     nombre: "Jupiter", 
-    descripcion: "Jupiter is the largest planet, known for its Great Red Spot and many moons.", 
-    calendario: "The astronomical calendar of Jupiter includes events like its moons' transits.", 
-    exploraciones: "Explorations of Jupiter have been conducted by missions like Galileo and Juno.", 
-    curiosidades: "Jupiter has a strong magnetic field and radiation belts.", 
-    masInformacion: "For more information, visit [NASA - Jupiter](https://solarsystem.nasa.gov/planets/jupiter/overview/) and explore careers in astrophysics at [American Physical Society](https://www.aps.org/)."
+    descripcion: "Jupiter is the largest planet in the solar system, known for its many moons and the Great Red Spot, a massive storm that has been raging for centuries.", 
+    calendario: "In 2023, Jupiter reached opposition on November 3rd, making it incredibly bright and visible all night long. Watch for the next close approach in 2024 for stunning views through telescopes.", 
+    exploraciones: "Jupiter has been explored by missions like Pioneer, Voyager, and the Juno mission, which is currently studying the planet's atmosphere and magnetosphere.", 
+    curiosidades: "Jupiter has a strong magnetic field and radiation belts, and it has at least 79 moons, including the four large Galilean moons: Io, Europa, Ganymede, and Callisto.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/jupiter/overview/"
   },
   { 
     nombre: "Saturn", 
-    descripcion: "Famous for its rings, Saturn is a gas giant with a unique beauty.", 
-    calendario: "Cosmic events on Saturn include ring visibility and moon alignments.", 
-    exploraciones: "Explorations of Saturn have been carried out by the Cassini spacecraft.", 
-    curiosidades: "Saturn could float in water because it is mostly made of gas.", 
-    masInformacion: "Learn more at [NASA - Saturn](https://solarsystem.nasa.gov/planets/saturn/overview/) and find resources for studying space science at [Space Science Institute](https://www.spacescience.org/)."
+    descripcion: "Saturn is famous for its stunning ring system, which is made of ice and rock particles. It is a gas giant composed primarily of hydrogen and helium.", 
+    calendario: "Saturn’s rings will be at their best visibility in 2025, as the planet reaches opposition. At this time, Saturn will be closest to Earth, and the rings will appear wide open for excellent viewing.", 
+    exploraciones: "Saturn has been explored by Pioneer 11, Voyager 1 and 2, and the Cassini spacecraft, which studied the planet, its rings, and its moons in detail for over 13 years.", 
+    curiosidades: "Saturn could float in water because it is mostly made of gas. Its moon, Titan, is the only moon in the solar system with a thick atmosphere.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/saturn/overview/"
   },
   { 
     nombre: "Uranus", 
-    descripcion: "Uranus rotates on its side, giving it a unique orientation in the solar system.", 
-    calendario: "Cosmic events on Uranus include the visibility of its rings.", 
-    exploraciones: "Explorations of Uranus have been conducted mainly by the Voyager 2 mission.", 
-    curiosidades: "Uranus is often referred to as an 'ice giant'.", 
-    masInformacion: "For more information, visit [NASA - Uranus](https://solarsystem.nasa.gov/planets/uranus/overview/) and consider careers in planetary research at [Planetary Society](https://www.planetary.org/)."
+    descripcion: "Uranus is known for its unique tilt, rotating on its side compared to other planets in the solar system. It is an ice giant with a cold atmosphere of hydrogen, helium, and methane.", 
+    calendario: "In 2033, Uranus will be at opposition, offering the best views of the planet as it aligns with Earth and the Sun. Though faint, it can be seen through small telescopes.", 
+    exploraciones: "Uranus has only been visited by one spacecraft, Voyager 2, which flew by in 1986. Scientists hope to send more missions to study its moons and rings.", 
+    curiosidades: "Uranus is often referred to as an 'ice giant' because it has more 'ices' like water, ammonia, and methane compared to Jupiter and Saturn.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/uranus/overview/"
   },
   { 
     nombre: "Neptune", 
-    descripcion: "The last planet of the solar system, Neptune is known for its deep blue color and strong winds.", 
-    calendario: "Cosmic events on Neptune include its dynamic atmosphere.", 
-    exploraciones: "Explorations of Neptune have been conducted by Voyager 2.", 
-    curiosidades: "Neptune has the strongest winds in the solar system, reaching up to 2,100 kilometers per hour.", 
-    masInformacion: "Learn more at [NASA - Neptune](https://solarsystem.nasa.gov/planets/neptune/overview/) and explore oceanography careers at [American Geophysical Union](https://www.agu.org/)."
+    descripcion: "Neptune is the eighth and farthest planet from the Sun, known for its striking blue color and incredibly strong winds.", 
+    calendario: "In September 2024, Neptune will reach opposition, offering its brightest appearance as it comes closest to Earth. This is the best time to view the distant planet.", 
+    exploraciones: "Neptune was visited by Voyager 2 in 1989, providing our only close-up images of the planet. Future missions to study Neptune and its moons are being considered.", 
+    curiosidades: "Neptune has the fastest winds in the solar system, reaching speeds of up to 2,100 kilometers per hour. Its largest moon, Triton, has geysers that spew nitrogen gas.", 
+    masInformacion: "https://solarsystem.nasa.gov/planets/neptune/overview/"
   }
 ];
+
 
 
 function Presentacion() {

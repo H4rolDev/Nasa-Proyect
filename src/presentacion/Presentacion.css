@@ -40,8 +40,6 @@ html, body {
   font-weight: bold; /* Negrita */
 }
 
-
-
 /* Contenedor de los menús futurista */
 .menus-container-futurista {
   display: flex;
@@ -62,35 +60,21 @@ html, body {
   padding: 12px 20px !important;
   border: 2px solid rgba(0, 204, 255, 0.6); /* Bordes neón */
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
+  font-family: 'Space Mono', monospace; /* Tipografía futurista */
   margin-bottom: 10px !important;
 }
-
-.menu button {
-  background-color: rgba(0, 102, 204, 0.8); /* Azul oscuro espacial */
-  color: #fff;
-  padding: 15px 20px;
-  border: 2px solid rgba(0, 204, 255, 0.6); /* Bordes neón */
-  border-radius: 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
-  margin-bottom: 15px; /* Espacio entre los botones */
-}
-
-
 
 .menu button:hover {
   background-color: rgba(0, 153, 255, 1); /* Más brillante al pasar el mouse */
   box-shadow: 0 0 15px rgba(0, 204, 255, 0.9); /* Sombra luminosa */
   transform: translateY(-5px); /* Efecto de levantamiento */
+  font-family: 'Space Mono', monospace;
 }
+ 
 
 /* Texto del menú desplegable */
 .menu-desplegable-texto {
@@ -114,25 +98,26 @@ html, body {
 /* Botones de navegación (anterior/siguiente) con estilo futurista */
 .btn-anterior,
 .btn-siguiente {
-  padding: 15px 25px; /* Padding aumentado para mayor tamaño */
-  background-color: rgba(0, 102, 204, 0.8); /* Azul oscuro espacial */
-  color: white;
-  border: 2px solid rgba(0, 204, 255, 0.6); /* Bordes neón */
-  border-radius: 10px; /* Bordes redondeados como en los menús */
-  font-size: 18px;
-  text-transform: uppercase;
-  font-family: 'Orbitron', sans-serif; /* Tipografía futurista */
+  margin: 5px 0;
+  padding: 10px 20px;
+  background-color: rgba(34, 38, 58, 0.8);
+  color: #e0e0e0;
+  border-radius: 8px;
+  border: 2px solid #5a5e7e;
   cursor: pointer;
-  transition: all 0.3s ease; /* Transición suave */
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.9); /* Sombra luminosa */
+  font-size: 20px;
+  font-family: 'Space Mono', monospace;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
 /* Efecto hover para los botones de anterior y siguiente */
 .btn-anterior:hover:not(:disabled),
 .btn-siguiente:hover {
-  background-color: rgba(0, 153, 255, 1); /* Más brillante al pasar el mouse */
-  transform: translateY(-5px); /* Efecto de levantamiento */
-  box-shadow: 0 0 20px rgba(0, 204, 255, 1); /* Sombra luminosa más intensa */
+  background-color: #3f445a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  border-color: #ffffff;
 }
 
 /* Botón anterior deshabilitado */
@@ -172,15 +157,14 @@ p {
 }
 
 .planeta-img {
-  width: 100% !important; /* Hace que la imagen ocupe todo el ancho disponible del contenedor */
-  max-width: 350px;
-  min-width: 300px ;
-  height: auto; /* Mantiene la proporción original de la imagen */
-  display: block; 
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  max-width: 600px; /* Elimina el límite máximo de ancho */
+  height: auto; /* Mantiene la proporción de la imagen */
+  display: block;
+  margin: 0 auto;
   margin-top: 70px;
-  object-fit: cover; /* Asegura que la imagen no se distorsione */
-  animation: float 6s ease-in-out infinite; /* Animación de flote */
+  object-fit: cover;
+  animation: float 6s ease-in-out infinite;
 }
 
 /* Imagen del astronauta */
@@ -262,12 +246,6 @@ h2:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .planeta-img {
-    max-width: 100%; /* En pantallas pequeñas, ajusta el tamaño máximo de la imagen */
-  }
-}
-
 .planeta-nombre{
   font-size: 30px;
 }
@@ -309,4 +287,11 @@ h2:hover {
 .containerLink{
   width: 300px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .planeta-img {
+    width: 100%; /* Asegura que ocupe el 100% del contenedor en pantallas pequeñas */
+    max-width: 100%; /* Ajusta el tamaño máximo en pantallas pequeñas */
+  }
 }

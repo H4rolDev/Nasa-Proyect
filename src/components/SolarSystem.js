@@ -16,6 +16,7 @@ const SolarSystem = () => {
   const [planetsArray, setPlanets] = useState([]);
   const [cameraInitialPosition, setCameraInitialPosition] = useState({});
 
+  
   // Determinar la escala de tiuempo basado en la velocidad
   const determineTimeScale = (multiplier) => {
     if (multiplier <= 1) return `${Math.round(multiplier)} Hour`; // 1 hora o menos
@@ -38,7 +39,6 @@ const SolarSystem = () => {
     );
 
     setCameraInitialPosition({ x: 0, y: 0, z: 150 });
-
 
     // Inicializar el renderer
     const renderer = new THREE.WebGLRenderer();
@@ -267,7 +267,7 @@ const SolarSystem = () => {
       }
       renderer.dispose();
     };
-  }, [speedMultiplier]);
+  }, [planetsArray, speedMultiplier]);
 
 
   
@@ -317,7 +317,7 @@ const SolarSystem = () => {
           style={{
             position: "absolute",
             right: "5%",
-            top: "20%",
+            top: "5%",
             width: "30%",
             backgroundColor: "rgba(0, 0, 0, 0.7)", // Fondo negro semi-transparente
             color: "white",
@@ -326,8 +326,8 @@ const SolarSystem = () => {
           }}
         >
           <h2 className="titleInfo">{selectedPlanet.name}</h2>
-          <p></p>
-          
+          <img className="imgPlanetsSystemSolar" src={selectedPlanet.img} alt={selectedPlanet.name}></img>
+          <p className="descriptionSystemSolarInPlanet">{selectedPlanet.description}</p>
         </div>
       )}
 

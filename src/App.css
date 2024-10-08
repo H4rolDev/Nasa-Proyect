@@ -99,9 +99,10 @@ html, body {
   z-index: 1000;
 }
 
-.titleInfo{
-  font-size: 1.5em !important ;
-  background-color: rgba(34, 38, 58, 0.8) !important;
+.titleInfo {
+  font-size: 1.5em !important;
+  border: none;
+  
 }
 
 .planet-buttons button, .exit-button {
@@ -126,11 +127,11 @@ html, body {
 }
 
 .planet-buttons button:focus {
-  background-color: #313546; /* Cambia el color de fondo al hacer clic */
-  color: #ffffff;            /* Cambia el color del texto */
-  border-color: #ffffff;      /* Cambia el color del borde */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Agrega una sombra */
-  outline: none; /* Elimina el contorno por defecto que aparece en algunos navegadores */
+  background-color: #313546;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  outline: none;
 }
 
 /* Información de planetas */
@@ -147,7 +148,6 @@ html, body {
   overflow-y: auto;
 }
 
-/* Panel de control */
 .controls {
   position: fixed;
   bottom: 20px;
@@ -166,7 +166,6 @@ label {
   color: #ffffff;
 }
 
-/* Estilo para el control deslizante */
 input[type="range"] {
   -webkit-appearance: none;
   width: 200px;
@@ -187,7 +186,6 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-/* Información de planetas con zoom */
 .planet-container {
   display: flex;
   justify-content: space-between;
@@ -203,15 +201,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .zoom-in {
-  background-color: #2d3142; /* Cambia el color del fondo al ser seleccionado */
-  color: #ffffff;           /* Cambia el color del texto */
-  border-color: #ffffff;     /* Cambia el color del borde */
-  /* Puedes agregar más estilos según lo que desees, pero evita usar 'transform' */
+  background-color: #2d3142;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-
-
-/* Panel de información de planetas */
 .planet-info-panel {
   position: fixed;
   left: 0;
@@ -236,7 +230,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 10px;
 }
 
-/* Panel de información adicional */
 .info-panel {
   position: absolute;
   top: 20px;
@@ -255,4 +248,50 @@ input[type="range"]::-webkit-slider-thumb {
 
 .info-panel p {
   margin: 0;
+}
+
+.descriptionSystemSolarInPlanet {
+  color: white;
+}
+
+.imgPlanetsSystemSolar {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .imgPlanetsSystemSolar {
+    max-width: 300px;
+  }
+  
+  .planet-info-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .controls {
+    bottom: 10px;
+    left: 10px;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgPlanetsSystemSolar {
+    max-width: 200px;
+  }
+
+  .planet-info-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .controls {
+    bottom: 5px;
+    left: 5px;
+  }
 }

@@ -13,10 +13,9 @@ const SolarSystem = () => {
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
   const [timeScaleLabel, setTimeScaleLabel] = useState("Hour");
   const [selectedPlanet, setSelectedPlanet] = useState(null); // Estado para el planeta seleccionado
-  const [planets, setPlanets] = useState([]);
+  const [planetsArray, setPlanets] = useState([]);
   const [cameraInitialPosition, setCameraInitialPosition] = useState({});
 
-  planets ("error")
   // Determinar la escala de tiuempo basado en la velocidad
   const determineTimeScale = (multiplier) => {
     if (multiplier <= 1) return `${Math.round(multiplier)} Hour`; // 1 hora o menos
@@ -40,7 +39,6 @@ const SolarSystem = () => {
 
     setCameraInitialPosition({ x: 0, y: 0, z: 150 });
 
-    const planetsArray = [];
 
     // Inicializar el renderer
     const renderer = new THREE.WebGLRenderer();

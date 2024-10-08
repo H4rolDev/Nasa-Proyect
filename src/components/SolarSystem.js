@@ -13,7 +13,7 @@ const SolarSystem = () => {
   const [speedMultiplier, setSpeedMultiplier] = useState(1);
   const [timeScaleLabel, setTimeScaleLabel] = useState("Hour");
   const [selectedPlanet, setSelectedPlanet] = useState(null); // Estado para el planeta seleccionado
-  const [setPlanets] = useState([]);
+  const [planets, setPlanets] = useState([]);
   const [cameraInitialPosition, setCameraInitialPosition] = useState({});
 
   // Determinar la escala de tiuempo basado en la velocidad
@@ -268,8 +268,10 @@ const SolarSystem = () => {
       }
       renderer.dispose();
     };
-  }, [speedMultiplier, setPlanets]);
+  }, [speedMultiplier]);
 
+
+  
   useEffect(() => {
     setTimeScaleLabel(determineTimeScale(speedMultiplier));
   }, [speedMultiplier]);
